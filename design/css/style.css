@@ -20,12 +20,73 @@
     --bold: 700; 
 
 }
-img, picture {
-    display: block;
-    max-width: 100%;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-h1 {
-    line-height: 1;
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
 }
 
 body {
@@ -44,23 +105,35 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .product {
     background-color: var(--White);
-    border-radius: 0.5rem;
-    overflow: hidden;
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
 
+    display: grid;
+    overflow: hidden;
+    max-width: 600px;
 }
+
+@media (min-width: 600px) {
+    .product {
+      --content-padding: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
 .product_content {
     display: grid;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
 }
 
 .product_category {
-    letter-spacing: 6px;
+    font-size: 0.8125rem;
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 
@@ -81,7 +154,7 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
+    gap: .75rem;
     text-decoration: none;
     padding: .75rem 1.5rem;
     background-color: var(--Dark-cyan);

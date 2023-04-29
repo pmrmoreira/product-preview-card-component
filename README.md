@@ -4,7 +4,7 @@
   <br />
   <!-- Status -->
   <a href="#">
-    <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge" alt="Status In Development">
+    <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status Completed">
   </a>&nbsp;&nbsp;&nbsp;
 
 
@@ -23,27 +23,27 @@
 - [Demo](#demo)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Author](#author)
 
 ## Features
--
+- Responsive design for different screen sizes
+- Hover effects for interactivity
+- Ability to display product image, name, price, and description
 
 ## Screenshot
-
+![image](https://user-images.githubusercontent.com/79330219/235298993-ac9cd1da-50ba-4e82-a60b-45621ce38675.png)
 
 ## Demo
-You can try out the application ---
+Try out the [live demo](https://product-preview-card-component-eight-nu.vercel.app/) of the product preview card component.
 
 ## Built With
 - HTML
 - CSS
 
-
-
 ## Getting Started
-
-## Usage
+To get started with using the product preview card component, follow these steps:
+1. Download or clone the repository
+2. Open `index.html`
 
 ## Author
 Pedro Moreira
